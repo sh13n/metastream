@@ -67,6 +67,7 @@ export default {
   joinSession: 'Join Session',
   kick: 'Kick',
   language: 'Language',
+  localizationInstructionLink: 'Read localization instructions here.',
   lockQueue: 'Lock queue',
   moveToTop: 'Move to top',
   maxUsers: 'Max users',

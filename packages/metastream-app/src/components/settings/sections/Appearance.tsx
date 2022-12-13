@@ -12,6 +12,8 @@ import { SettingsProps } from '../types'
 import { ChatLocation } from '../../chat/Location'
 import { LanguageSetting } from '../Language'
 
+const LOCALIZATION_INSTRUCTION_LINK = 'https://github.com/samuelmaddock/metastream/tree/master/packages/metastream-app/src/locale#localization'
+
 interface Props extends SettingsProps {
   onChange: () => void
 }
@@ -24,7 +26,8 @@ export default class AppearanceSettings extends Component<Props> {
       <section className={styles.section}>
         <LanguageSetting onChange={this.props.onChange} />
         <p className={styles.small}>
-          <span className={optionsStyles.description}>Want to contribute?</span> <ExternalLink className="link-alt" href={`https://github.com/samuelmaddock/metastream/tree/master/packages/metastream-app/src/locale#localization`}>Read localization instructions here.</ExternalLink>
+          <span className={optionsStyles.description}>Want to contribute?</span>&nbsp;
+          <ExternalLink className="link-alt" href={LOCALIZATION_INSTRUCTION_LINK}>{t('localizationInstructionLink')}</ExternalLink>
         </p>
 
         <SwitchOption
